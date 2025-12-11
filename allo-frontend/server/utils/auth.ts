@@ -61,4 +61,3 @@ export function clearUserSession(event: H3Event) {
     path: '/',
   });
 }
-

@@ -86,7 +86,7 @@ const onSubmit = async () => {
     toast.add({
       title: 'Ошибка',
       description: 'Заполните все поля',
-      color: 'red',
+      color: 'error',
     });
     return;
   }
@@ -100,21 +100,22 @@ const onSubmit = async () => {
       toast.add({
         title: 'Успешно',
         description: 'Вы вошли в систему',
-        color: 'green',
+        color: 'success',
       });
       await router.push('/messenger');
     } else {
       toast.add({
         title: 'Ошибка',
         description: 'Неверный email или пароль',
-        color: 'red',
+        color: 'error',
       });
     }
   } catch (error) {
+    console.error('Ошибка входа:', error);
     toast.add({
       title: 'Ошибка',
       description: 'Произошла ошибка при входе',
-      color: 'red',
+      color: 'error',
     });
   } finally {
     isLoading.value = false;

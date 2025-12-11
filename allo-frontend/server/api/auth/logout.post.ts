@@ -5,4 +5,3 @@ export default defineEventHandler((event) => {
     success: true,
   };
 });
-
