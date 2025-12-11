@@ -43,11 +43,8 @@ function handleSendMessage(content: string) {
         class="px-6 py-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
       >
         <div class="flex items-center gap-3">
-          <UAvatar
-            :src="messengerStore.selectedUser.avatar"
-            :alt="`${messengerStore.selectedUser.firstName} ${messengerStore.selectedUser.lastName}`"
-            size="sm"
-          />
+          <UserAvatar :user="messengerStore.selectedUser" />
+
           <div>
             <h2 class="text-sm font-semibold text-gray-900 dark:text-white">
               {{ messengerStore.selectedUser.firstName }}
